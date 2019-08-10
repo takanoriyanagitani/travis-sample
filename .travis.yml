@@ -1,0 +1,18 @@
+dist: bionic
+
+language: c
+
+os:
+  - linux
+
+compiler:
+  - gcc
+
+env:
+  - ENV_TEST=299792458
+
+before_script:
+  - ulimit -n 1024
+
+script:
+  echo ${ENV_TEST}
